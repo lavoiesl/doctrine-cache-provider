@@ -1,5 +1,7 @@
 # Doctrine Cache Provider
 
+[![Build Status](https://travis-ci.org/lavoiesl/doctrine-cache-provider.svg?branch=master)](https://travis-ci.org/lavoiesl/doctrine-cache-provider)
+
 Library to add a Doctrine Provider to allow Doctrine Cache to connect to databases.
 
 This can be useful for a poor man's distributed cache system.
