@@ -1,0 +1,25 @@
+{
+    "name": "lavoiesl/doctrine-cache-provider",
+    "description": "Library to add a Doctrine Provider to allow Doctrine Cache to connect to databases.",
+    "type": "library",
+    "require": {
+        "doctrine/cache": "*",
+        "doctrine/dbal": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lavoiesl\\Doctrine\\CacheProvider\\": "src/",
+            "Lavoiesl\\Doctrine\\CacheProvider\\Test\\": "tests/"
+        }
+    },
+    "suggest": {
+        "lavoiesl/doctrine-cache-detector": "Library to detect which Doctrine Cache system is available and determine the best to use."
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sébastien Lavoie",
+            "email": "seb@wemakecustom.com"
+        }
+    ]
+}
