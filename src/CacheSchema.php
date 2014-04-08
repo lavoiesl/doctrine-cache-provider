@@ -25,7 +25,7 @@ class CacheSchema
 
         $table = $schema->createTable($table);
         $table->addColumn($fields['id'], 'string', array('length' => 127));
-        $table->addColumn($fields['data'], 'text', array('length' => pow(2, 24) - 1));
+        $table->addColumn($fields['data'], 'object', array('length' => pow(2, 24) - 1));
         $table->addColumn($fields['expiration'], 'datetime', array('notnull' => false));
         $table->setPrimaryKey(array($fields['id']));
 

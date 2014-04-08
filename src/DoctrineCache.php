@@ -51,18 +51,8 @@ class DoctrineCache extends CacheProvider
 
             return false;
         } else {
-            return $this->unserialize($row[$this->fields['data']]);
+            return $row[$this->fields['data']];
         }
-    }
-
-    protected function serialize($value)
-    {
-        return serialize($value);
-    }
-
-    protected function unserialize($string)
-    {
-        return unserialize($string);
     }
 
     /**
@@ -107,7 +97,7 @@ class DoctrineCache extends CacheProvider
         $stmt = $this->statements['save'];
 
         $stmt->bindValue('id', $id);
-        $stmt->bindValue('data', $this->serialize($data));
+        $stmt->bindValue('data', $data);
         $stmt->bindValue('expiration', $expiration);
 
         return $stmt->execute();
