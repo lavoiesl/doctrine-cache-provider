@@ -48,7 +48,8 @@ class CacheSchema
 
     public static function dropTable(Connection $connection, $table = 'cache', array $fields = array())
     {
-        $schema = static::getSchema();
+        $sm = $connection->getSchemaManager();
+        $schema = $sm->createSchema();
 
         $sqls = $schema->toDropSql($connection->getDatabasePlatform());
         foreach ($sqls as $sql) {

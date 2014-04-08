@@ -32,6 +32,7 @@ abstract class DoctrineCacheTest extends CacheTest
     public function tearDown()
     {
         $this->assertGreaterThan(0, CacheSchema::dropTable($this->connection));
+        $this->assertEquals(0, CacheSchema::dropTable($this->connection));
 
         $this->connection->close();
     }
